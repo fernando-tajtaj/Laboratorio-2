@@ -57,8 +57,6 @@ public class NodoVista extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanelContenedor = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        impresion = new javax.swing.JTextArea();
         jPanelPrimario = new javax.swing.JDesktopPane();
         jPanelSecundario = new javax.swing.JInternalFrame();
         btnInsertar = new javax.swing.JButton();
@@ -67,6 +65,9 @@ public class NodoVista extends javax.swing.JFrame {
         PostOrden = new javax.swing.JButton();
         txtdato = new javax.swing.JTextField();
         btnEliminar = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        lblResultadoOperacion = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -74,16 +75,6 @@ public class NodoVista extends javax.swing.JFrame {
         jPanelContenedor.setBackground(new java.awt.Color(255, 255, 255));
         jPanelContenedor.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Panel de Pruebas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 10))); // NOI18N
         jPanelContenedor.setOpaque(false);
-
-        jScrollPane1.setOpaque(false);
-
-        impresion.setEditable(false);
-        impresion.setColumns(20);
-        impresion.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        impresion.setRows(5);
-        impresion.setBorder(javax.swing.BorderFactory.createTitledBorder("Resultados de operaciones"));
-        impresion.setOpaque(false);
-        jScrollPane1.setViewportView(impresion);
 
         jPanelPrimario.setBackground(new java.awt.Color(51, 153, 255));
         jPanelPrimario.setOpaque(false);
@@ -146,6 +137,40 @@ public class NodoVista extends javax.swing.JFrame {
             }
         });
 
+        jPanel1.setBackground(new java.awt.Color(16, 69, 79));
+        jPanel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(3, 3, 3, 3));
+
+        lblResultadoOperacion.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        lblResultadoOperacion.setForeground(new java.awt.Color(255, 255, 255));
+        lblResultadoOperacion.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("RESULTADO ORDENAMIENTOS");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblResultadoOperacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 134, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addComponent(lblResultadoOperacion, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout jPanelContenedorLayout = new javax.swing.GroupLayout(jPanelContenedor);
         jPanelContenedor.setLayout(jPanelContenedorLayout);
         jPanelContenedorLayout.setHorizontalGroup(
@@ -170,8 +195,9 @@ public class NodoVista extends javax.swing.JFrame {
                                 .addComponent(btnInsertar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(11, 11, 11))
                     .addComponent(jPanelPrimario, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 3, Short.MAX_VALUE))
         );
@@ -180,8 +206,8 @@ public class NodoVista extends javax.swing.JFrame {
             .addGroup(jPanelContenedorLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanelPrimario, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(11, 11, 11)
+                .addGroup(jPanelContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelContenedorLayout.createSequentialGroup()
                         .addGroup(jPanelContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnInsertar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -192,7 +218,7 @@ public class NodoVista extends javax.swing.JFrame {
                             .addComponent(InOrden, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(PreOrden, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(PostOrden, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -210,7 +236,7 @@ public class NodoVista extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanelContenedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(32, 32, 32))
         );
 
         pack();
@@ -221,8 +247,8 @@ public class NodoVista extends javax.swing.JFrame {
         String recorrido = null;
         recorrido = this.arbolControlador.postOrden();
 
-        this.impresion.setText("");
-        this.impresion.setText(recorrido);
+        this.lblResultadoOperacion.setText("");
+        this.lblResultadoOperacion.setText(recorrido);
     }//GEN-LAST:event_PostOrdenActionPerformed
 
     private void PreOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PreOrdenActionPerformed
@@ -230,8 +256,8 @@ public class NodoVista extends javax.swing.JFrame {
         String recorrido = null;
         recorrido = this.arbolControlador.preOrden();
 
-        this.impresion.setText("");
-        this.impresion.setText(recorrido);
+        this.lblResultadoOperacion.setText("");
+        this.lblResultadoOperacion.setText(recorrido);
     }//GEN-LAST:event_PreOrdenActionPerformed
 
     private void InOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InOrdenActionPerformed
@@ -239,8 +265,8 @@ public class NodoVista extends javax.swing.JFrame {
         String recorrido = null;
         recorrido = this.arbolControlador.inOrden();
 
-        this.impresion.setText("");
-        this.impresion.setText(recorrido);
+        this.lblResultadoOperacion.setText("");
+        this.lblResultadoOperacion.setText(recorrido);
     }//GEN-LAST:event_InOrdenActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
@@ -259,7 +285,7 @@ public class NodoVista extends javax.swing.JFrame {
             this.inicializar(true);
             RepintarArbol();
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "No se pudo insertar el dato", "Intenta de nuevo...", 0);
+            JOptionPane.showMessageDialog(null, "Error: Dato Inválido", "Intenta de nuevo...", 0);
         }
     }//GEN-LAST:event_btnEliminarActionPerformed
 
@@ -267,7 +293,6 @@ public class NodoVista extends javax.swing.JFrame {
         try {
             int dato = Integer.parseInt(txtdato.getText());
             this.arbolControlador.insertar(dato);
-            JOptionPane.showMessageDialog(null, "El dato fue insertado correctamente", " ...", 1);
             this.inicializar(true);
             RepintarArbol();
         } catch (Exception e) {
@@ -318,11 +343,12 @@ public class NodoVista extends javax.swing.JFrame {
     private javax.swing.JButton PreOrden;
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnInsertar;
-    private javax.swing.JTextArea impresion;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelContenedor;
     private javax.swing.JDesktopPane jPanelPrimario;
     private javax.swing.JInternalFrame jPanelSecundario;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblResultadoOperacion;
     private javax.swing.JTextField txtdato;
     // End of variables declaration//GEN-END:variables
 }
