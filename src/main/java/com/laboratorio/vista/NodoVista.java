@@ -167,7 +167,7 @@ public class NodoVista extends javax.swing.JFrame {
                         .addGroup(jPanelContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(PostOrden)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelContenedorLayout.createSequentialGroup()
-                                .addComponent(btnInsertar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnInsertar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
@@ -218,17 +218,29 @@ public class NodoVista extends javax.swing.JFrame {
 
     private void PostOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PostOrdenActionPerformed
         // TODO add your handling code here:
+        String recorrido = null;
+        recorrido = this.arbolControlador.postOrden();
 
+        this.impresion.setText("");
+        this.impresion.setText(recorrido);
     }//GEN-LAST:event_PostOrdenActionPerformed
 
     private void PreOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PreOrdenActionPerformed
         // TODO add your handling code here:
+        String recorrido = null;
+        recorrido = this.arbolControlador.preOrden();
 
+        this.impresion.setText("");
+        this.impresion.setText(recorrido);
     }//GEN-LAST:event_PreOrdenActionPerformed
 
     private void InOrdenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InOrdenActionPerformed
         // TODO add your handling code here:
+        String recorrido = null;
+        recorrido = this.arbolControlador.inOrden();
 
+        this.impresion.setText("");
+        this.impresion.setText(recorrido);
     }//GEN-LAST:event_InOrdenActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
